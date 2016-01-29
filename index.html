@@ -113,6 +113,20 @@
   </div>
 </div>
 
+<div class='item-container'>
+  <div class='item-container-header'>Weather update</div>
+  <div class='item-container-content'>
+    <label class='item'>
+      30 mn
+      <input type='radio' class='item-radio'  name = 'radio2' input id='radio_refresh' value='a' >
+    </label>
+    <label class='item'>
+      60 mn
+      <input type='radio' class='item-radio'  name= 'radio2' input id='radio_refresh' value='b' checked>
+    </label>
+  </div>
+</div>
+
 
 <div class='colors'>
   <div class='item-container-header'>Colors</div>
@@ -162,6 +176,8 @@
     var input_city = document.getElementById('input_city');
     var select_utc = document.getElementById('select_utc');
     var radio_units = document.getElementById('radio_units');
+    var radio_refresh = document.getElementById('radio_refresh');
+
     var toggle_vibration = document.getElementById('toggle_vibration');
     var toggle_bw_icons = document.getElementById('toggle_bw_icons');
 
@@ -178,6 +194,7 @@
       'input_city': input_city.value,
       'select_utc': select_utc.value,
       'radio_units': radio_units.checked,
+      'radio_refresh': radio_refresh.checked,
       'toggle_vibration': toggle_vibration.checked,
       'toggle_bw_icons': toggle_bw_icons.checked,
 
@@ -194,6 +211,7 @@
     localStorage['input_city'] = options['input_city'];
     localStorage['select_utc'] = options['select_utc'];
     localStorage['radio_units'] = options['radio_units'];
+    localStorage['radio_refresh'] = options['radio_refresh'];
     localStorage['toggle_vibration'] = options['toggle_vibration'];
     localStorage['toggle_bw_icons'] = options['toggle_bw_icons'];
     
@@ -235,6 +253,7 @@
     var input_city = document.getElementById('input_city');
     var select_utc = document.getElementById('select_utc');
     var radio_units = document.getElementById('radio_units');
+    var radio_refresh = document.getElementById('radio_refresh');
     var toggle_vibration = document.getElementById('toggle_vibration');
     var toggle_bw_icons = document.getElementById('toggle_bw_icons');
     var color_right_back = document.getElementById('color_right_back');
@@ -247,6 +266,7 @@
     input_city.value =  localStorage['input_city'];
     select_utc.value =  JSON.parse(localStorage['select_utc']);
     radio_units.checked =  JSON.parse(localStorage['radio_units']);
+    radio_refresh.checked =  JSON.parse(localStorage['radio_refresh']);
     toggle_vibration.checked =  JSON.parse(localStorage['toggle_vibration']);
     toggle_bw_icons.checked =  JSON.parse(localStorage['toggle_bw_icons']);
     
