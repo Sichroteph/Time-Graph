@@ -1,0 +1,299 @@
+{
+    "author": "CJ",
+    "dependencies": {},
+    "keywords": [],
+    "name": "time-graph-weather",
+    "pebble": {
+        "capabilities": [
+            "location",
+            "configurable"
+        ],
+        "displayName": "Time Graph Weather",
+        "enableMultiJS": false,
+        "messageKeys": {
+            "KEY_CLOUDS": 4,
+            "KEY_COLOR_HOURS_B": 47,
+            "KEY_COLOR_HOURS_G": 46,
+            "KEY_COLOR_HOURS_R": 45,
+            "KEY_COLOR_LEFT_B": 44,
+            "KEY_COLOR_LEFT_G": 43,
+            "KEY_COLOR_LEFT_R": 42,
+            "KEY_COLOR_RIGHT_B": 41,
+            "KEY_COLOR_RIGHT_G": 40,
+            "KEY_COLOR_RIGHT_R": 39,
+            "KEY_COLOR_RULER_B": 50,
+            "KEY_COLOR_RULER_G": 49,
+            "KEY_COLOR_RULER_R": 48,
+            "KEY_COLOR_TEMPERATURES_B": 53,
+            "KEY_COLOR_TEMPERATURES_G": 52,
+            "KEY_COLOR_TEMPERATURES_R": 51,
+            "KEY_CONDITIONS": 1,
+            "KEY_DESCRIPTION": 2,
+            "KEY_FORECAST_H1": 16,
+            "KEY_FORECAST_H2": 17,
+            "KEY_FORECAST_H3": 18,
+            "KEY_FORECAST_ICON1": 26,
+            "KEY_FORECAST_ICON2": 27,
+            "KEY_FORECAST_ICON3": 28,
+            "KEY_FORECAST_RAIN1": 21,
+            "KEY_FORECAST_RAIN2": 22,
+            "KEY_FORECAST_RAIN3": 23,
+            "KEY_FORECAST_RAIN4": 24,
+            "KEY_FORECAST_RAIN5": 25,
+            "KEY_FORECAST_TEMP1": 11,
+            "KEY_FORECAST_TEMP2": 12,
+            "KEY_FORECAST_TEMP3": 13,
+            "KEY_FORECAST_TEMP4": 14,
+            "KEY_FORECAST_TEMP5": 15,
+            "KEY_FORECAST_WIND1": 29,
+            "KEY_FORECAST_WIND2": 30,
+            "KEY_FORECAST_WIND3": 31,
+            "KEY_GPS": 33,
+            "KEY_HUMIDITY": 5,
+            "KEY_ICON": 10,
+            "KEY_INPUT_CITY": 34,
+            "KEY_LAST_REFRESH": 55,
+            "KEY_LOCATION": 32,
+            "KEY_RADIO_REFRESH": 54,
+            "KEY_RADIO_UNITS": 36,
+            "KEY_SELECT_UTC": 35,
+            "KEY_SUNRISE": 6,
+            "KEY_SUNSET": 7,
+            "KEY_TEMPERATURE": 0,
+            "KEY_TMAX": 9,
+            "KEY_TMIN": 8,
+            "KEY_TOGGLE_BW_ICONS": 38,
+            "KEY_TOGGLE_VIBRATION": 37,
+            "KEY_WIND_SPEED": 3,
+            "MESSAGE_KEY": 101,
+            "STATUS_KEY": 100
+        },
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "characterRegex": "[0-9]",
+                    "file": "fonts/Clearview_60",
+                    "name": "FONT_CLEARVIEW_60",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "images/AVERSES_DE_PLUIE_FORTE",
+                    "name": "AVERSES_DE_PLUIE_FORTE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BROUILLARD",
+                    "name": "BROUILLARD",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BT",
+                    "name": "BT",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/COUVERT_AVEC_AVERSES",
+                    "name": "COUVERT_AVEC_AVERSES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/DEVELOPPEMENT_NUAGEUX",
+                    "name": "DEVELOPPEMENT_NUAGEUX",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/ENSOLEILLE",
+                    "name": "ENSOLEILLE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/FAIBLES_PASSAGES_NUAGEUX",
+                    "name": "FAIBLES_PASSAGES_NUAGEUX",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/FORTEMENT_NUAGEUX",
+                    "name": "FORTEMENT_NUAGEUX",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/FORTEMENT_ORAGEUX",
+                    "name": "FORTEMENT_ORAGEUX",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NEIGE_FORTE",
+                    "name": "NEIGE_FORTE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_AVEC_AVERSES",
+                    "name": "NUIT_AVEC_AVERSES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_AVEC_DEVELOPPEMENT_NUAGEUX",
+                    "name": "NUIT_AVEC_DEVELOPPEMENT_NUAGEUX",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_BIEN_DEGAGEE",
+                    "name": "NUIT_BIEN_DEGAGEE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_CLAIRE",
+                    "name": "NUIT_CLAIRE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_NUAGEUSE",
+                    "name": "NUIT_NUAGEUSE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/PLUIE_FORTE",
+                    "name": "PLUIE_FORTE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/ruler_icon.png",
+                    "name": "IMAGE_MENU_ICON",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/TABLE",
+                    "name": "TABLE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/TABLE_OG",
+                    "name": "TABLE_OG",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/AVERSES_DE_PLUIE_FORTE_W",
+                    "name": "AVERSES_DE_PLUIE_FORTE_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BROUILLARD_W",
+                    "name": "BROUILLARD_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/COUVERT_AVEC_AVERSES_W",
+                    "name": "COUVERT_AVEC_AVERSES_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/DEVELOPPEMENT_NUAGEUX_W",
+                    "name": "DEVELOPPEMENT_NUAGEUX_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/ENSOLEILLE_W",
+                    "name": "ENSOLEILLE_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/FAIBLES_PASSAGES_NUAGEUX_W",
+                    "name": "FAIBLES_PASSAGES_NUAGEUX_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/FORTEMENT_NUAGEUX_W",
+                    "name": "FORTEMENT_NUAGEUX_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/FORTEMENT_ORAGEUX_W",
+                    "name": "FORTEMENT_ORAGEUX_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NEIGE_FORTE_W",
+                    "name": "NEIGE_FORTE_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_AVEC_AVERSES_W",
+                    "name": "NUIT_AVEC_AVERSES_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_AVEC_DEVELOPPEMENT_NUAGEUX_W",
+                    "name": "NUIT_AVEC_DEVELOPPEMENT_NUAGEUX_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_CLAIRE_W",
+                    "name": "NUIT_CLAIRE_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_NUAGEUSE_W",
+                    "name": "NUIT_NUAGEUSE_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/PLUIE_FORTE_W",
+                    "name": "PLUIE_FORTE_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/NUIT_BIEN_DEGAGEE_W",
+                    "name": "NUIT_BIEN_DEGAGEE_W",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk"
+        ],
+        "uuid": "d886fe3f-8918-4cbf-9cd8-a6e2d477727f",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "5.2.0"
+}
